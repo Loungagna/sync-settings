@@ -1,0 +1,106 @@
+{
+	"atom-beautify": {
+		"general": {
+			"_analyticsUserId": "e230a486-0ada-4340-aeaf-09ffc2d02b1b",
+			"beautifyEntireFileOnSave": false,
+			"muteUnsupportedLanguageErrors": true
+		},
+		"markdown": {
+			"default_beautifier": "Remark",
+			"yaml": false
+		}
+	},
+	"core": {
+		"disabledPackages": [
+			"markdown-preview",
+			"vim-mode",
+			"ex-mode"
+		],
+		"packagesWithKeymapsDisabled": [
+			"markdown-writer"
+		],
+		"telemetryConsent": "limited"
+	},
+	"editor": {
+		"fontSize": 13,
+		"invisibles": {
+			"space": " ",
+			"tab": "T"
+		},
+		"scrollPastEnd": true,
+		"showIndentGuide": true,
+		"showInvisibles": true
+	},
+	"exception-reporting": {
+		"userId": "368f91cd-c318-8c6c-1414-3f3a0c729661"
+	},
+	"floobits": {
+		"audioOnly": true
+	},
+	"git-diff": {
+		"showIconsInEditorGutter": true
+	},
+	"markdown-writer": {
+		"fileExtension": ".md",
+		"siteEngine": "jekyll",
+		"tableAlignment": "left"
+	},
+	"minimap": {
+		"absoluteMode": true,
+		"plugins": {
+			"bookmarks": true,
+			"bookmarksDecorationsZIndex": 0,
+			"find-and-replace": true,
+			"find-and-replaceDecorationsZIndex": 0,
+			"git-diff": true,
+			"git-diffDecorationsZIndex": 0,
+			"highlight-selected": true,
+			"highlight-selectedDecorationsZIndex": 0
+		}
+	},
+	"one-dark-ui": {
+		"layoutMode": "Spacious",
+		"tabSizing": "Minimum"
+	},
+	"project-plus": {
+		"projectHome": " ~",
+		"showPath": true
+	},
+	"split-diff": {
+		"diffWords": true,
+		"ignoreWhitespace": true,
+		"leftEditorColor": "red",
+		"rightEditorColor": "green",
+		"syncHorizontalScroll": true
+	},
+	"sync-settings": {
+		"extraFiles": [
+			"process-palette.json"
+		]
+	},
+	"tidy-markdown": {
+		"ensureFirstHeaderIsH1": false
+	},
+	"todo-show": {
+		"findTheseTodos": [
+			"FIXME",
+			"TODO",
+			"CHANGED",
+			"XXX",
+			"IDEA",
+			"HACK",
+			"NOTE",
+			"REVIEW",
+			"BUGBUG",
+			"jacek",
+			"JACEK"
+		],
+		"sortBy": "Path"
+	},
+	"tree-view": {
+		"hideVcsIgnoredFiles": true
+	},
+	"welcome": {
+		"showOnStartup": false
+	}
+}

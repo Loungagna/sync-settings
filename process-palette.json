@@ -1,0 +1,166 @@
+{
+  "patterns": {
+    "P1": {
+      "expression": "(path):(line)"
+    },
+    "P2": {
+      "expression": "(path)\\s+(line)",
+      "path": "(?:\\/[\\w\\.\\-]+)+"
+    }
+  },
+  "commands": [
+    {
+      "namespace": "mix test",
+      "action": "ALL",
+      "command": "mix test",
+      "arguments": [],
+      "cwd": "{projectPath}",
+      "inputDialogs": [],
+      "env": {},
+      "keystroke": null,
+      "stream": true,
+      "outputTarget": "panel",
+      "outputBufferSize": null,
+      "maxCompleted": 3,
+      "autoShowOutput": true,
+      "autoHideOutput": true,
+      "scrollLockEnabled": false,
+      "singular": true,
+      "promptToSave": false,
+      "saveOption": "none",
+      "patterns": [
+        "P1",
+        "default"
+      ],
+      "successOutput": "{stdout}",
+      "errorOutput": "{stdout}\n{stderr}",
+      "fatalOutput": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}",
+      "successMessage": "ALL tests run successfully",
+      "errorMessage": "runnig ALL tests failed!",
+      "fatalMessage": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}"
+    },
+    {
+      "namespace": "mix  test",
+      "action": "current file",
+      "command": "mix test {fileAbsPath}",
+      "arguments": [],
+      "cwd": "{projectPath}",
+      "inputDialogs": [],
+      "env": {},
+      "keystroke": null,
+      "stream": true,
+      "outputTarget": "panel",
+      "outputBufferSize": null,
+      "maxCompleted": 3,
+      "autoShowOutput": true,
+      "autoHideOutput": false,
+      "scrollLockEnabled": false,
+      "singular": true,
+      "promptToSave": true,
+      "saveOption": "referenced",
+      "patterns": [
+        "P1",
+        "default"
+      ],
+      "successOutput": "{stdout}",
+      "errorOutput": "{stdout}\n{stderr}",
+      "fatalOutput": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}",
+      "successMessage": "Tested {fileNameExt} successfully",
+      "errorMessage": "Testing {fileNameExt} failed",
+      "fatalMessage": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}"
+    },
+    {
+      "namespace": "mix test",
+      "action": "specific line",
+      "command": "mix test {fileAbsPath}:{line_no}",
+      "arguments": [],
+      "cwd": "{projectPath}",
+      "inputDialogs": [
+        {
+          "variableName": "line_no",
+          "message": "line number?",
+          "initialInput": ""
+        }
+      ],
+      "env": {},
+      "keystroke": null,
+      "stream": true,
+      "outputTarget": "panel",
+      "outputBufferSize": null,
+      "maxCompleted": 3,
+      "autoShowOutput": true,
+      "autoHideOutput": false,
+      "scrollLockEnabled": false,
+      "singular": true,
+      "promptToSave": true,
+      "saveOption": "referenced",
+      "patterns": [
+        "P1",
+        "default"
+      ],
+      "successOutput": "{stdout}",
+      "errorOutput": "{stdout}\n{stderr}",
+      "fatalOutput": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}",
+      "successMessage": "passed: {fileNameExt}:{line_no}",
+      "errorMessage": "failed: {fileNameExt}:{line_no}",
+      "fatalMessage": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}"
+    },
+    {
+      "namespace": "mix",
+      "action": "clean",
+      "command": "mix clean",
+      "arguments": [],
+      "cwd": "{projectPath}",
+      "inputDialogs": [],
+      "env": {},
+      "keystroke": null,
+      "stream": false,
+      "outputTarget": "void",
+      "outputBufferSize": 80000,
+      "maxCompleted": 3,
+      "autoShowOutput": false,
+      "autoHideOutput": false,
+      "scrollLockEnabled": false,
+      "singular": true,
+      "promptToSave": false,
+      "saveOption": "none",
+      "patterns": [],
+      "successOutput": "{stdout}",
+      "errorOutput": "{stdout}\n{stderr}",
+      "fatalOutput": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}",
+      "successMessage": "Executed: {fullCommand}",
+      "errorMessage": "Executed: {fullCommand}\nReturned with code {exitStatus}\n{stderr}",
+      "fatalMessage": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}"
+    },
+    {
+      "namespace": "mix",
+      "action": "warnings",
+      "command": "mix clean && mix compile | grep -e warning -e \"Compilation error\" -A1",
+      "arguments": [],
+      "cwd": "{projectPath}",
+      "inputDialogs": [],
+      "env": {},
+      "keystroke": null,
+      "stream": false,
+      "outputTarget": "panel",
+      "outputBufferSize": null,
+      "maxCompleted": 5,
+      "autoShowOutput": true,
+      "autoHideOutput": false,
+      "scrollLockEnabled": false,
+      "singular": true,
+      "promptToSave": true,
+      "saveOption": "all",
+      "patterns": [
+        "P1",
+        "default"
+      ],
+      "successOutput": "{stdout}\nWarning check complete!",
+      "errorOutput": "{stdout}\n{stderr}\nWarning check complete!",
+      "fatalOutput": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}",
+      "successMessage": "warning check completed",
+      "errorMessage": null,
+      "fatalMessage": "Failed to execute : {fullCommand}\n{stdout}\n{stderr}"
+    }
+  ]
+}

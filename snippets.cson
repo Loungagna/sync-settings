@@ -1,0 +1,55 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'.source.elixir':
+  'H1 comment':
+    'prefix': 'h1'
+    'body': """
+      #===========================================================================
+      # $1
+      #===========================================================================
+    """
+  'H2 comment':
+    'prefix': 'h2'
+    'body': """
+      #---------------------------------------------------------------------------
+      # $1
+      #---------------------------------------------------------------------------
+    """
+  'debug imports':
+    'prefix': 'debug'
+    'body': """
+      require Mainframe.Debug
+      import Mainframe.Debug
+    """
+  'enforce import':
+    'prefix': 'enforcer'
+    'body': 'import Mainframe.Policies, only: [enforce!: 1]'
+  'dump pretty printed':
+    'prefix': 'print'
+    'body': 'IO.puts("### $1 :" <> inspect($2, pretty: true))'
+  '@moduletag :api_account':
+    'prefix': 'modaccount'
+    'body': '@moduletag :api_account'
+  '@moduletag :api_conversation':
+    'prefix': 'modconversation'
+    'body': '@moduletag :api_conversation'
